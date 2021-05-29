@@ -32,13 +32,13 @@
   
     // 平面を作成
     var geometry = new THREE.PlaneGeometry( 1, 2, 3 );
-    var material = new THREE.MeshPhongMaterial( {color: 0x0000ff, side: THREE.DoubleSide} );
+    var material = new THREE.MeshPhongMaterial( {color: 0xffa500, side: THREE.DoubleSide} );
     var plane = new THREE.Mesh( geometry, material );
     plane.position.z = -5;
     scene.add( plane );
   
     // 平行光源
-    var directionalLight = new THREE.DirectionalLight(0xffffff);
+    var directionalLight = new THREE.DirectionalLight(0xba55d3);
     directionalLight.position.set(1, 1, 1);
     // シーンに追加
     scene.add(directionalLight);
