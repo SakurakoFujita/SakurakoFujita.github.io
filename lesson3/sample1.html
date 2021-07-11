@@ -21,6 +21,16 @@
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     document.body.appendChild(renderer.domElement);
+    const renderer = new THREE.WebGLRenderer({canvas: document.querySelector('#myCanvas')});
+    
+    // 背景の色を設定
+    renderer.setClearColor(0xffffff);
+    
+    // テクスチャー読み込み
+    var textureLoader = new THREE.TextureLoader();
+    var texture = textureLoader.load("img/tree0.png");
+    var mat = newTHREE.MeshLambertMaterial( {transparent: true} ); 
+    mat.map = texture;
   
     // シーンを作成
     var scene = new THREE.Scene();
